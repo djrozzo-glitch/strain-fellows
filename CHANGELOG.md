@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4
+
+- Added Glitch Cookie, Green Cloud and Espresso Shot pickups with bonus stars, a smoke-powered lift and a three-landing combo.
+- Added Canal Lounge branding, live points and a downloadable PNG score card.
+- Limited the glitch effect to scenery and honored reduced-motion preferences.
+
 ## 0.2.3
 
 - Added grounded illustrated street and rooftop layers and smooth parallax across all six environments.

@@ -1,3 +1,29 @@
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050b17;color:#fff;font-family:system-ui,-apple-system,sans-serif;overscroll-behavior:none}body{display:grid;place-items:center}#game{position:relative;width:min(100vw,520px);height:100dvh;max-height:1000px;overflow:hidden;background:#0a1934;touch-action:none;user-select:none}canvas{width:100%;height:100%;display:block}header{position:absolute;top:max(12px,env(safe-area-inset-top));left:12px;right:12px;display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid #6abaff44;background:#061324d9;border-radius:16px;backdrop-filter:blur(8px)}header div{flex:1}small{display:block;color:#9eb9d4;font-size:10px;letter-spacing:2px}strong{font-size:21px;font-variant-numeric:tabular-nums}button{font:inherit;color:white;border:1px solid #60baff66;background:#122944;border-radius:12px;cursor:pointer}header button{width:42px;height:42px;font-size:20px}#zone{position:absolute;top:88px;left:0;right:0;text-align:center;color:#b4d9ff;font-size:11px;letter-spacing:4px;text-shadow:0 1px 5px #000}#overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,#07152bdd,#07152b88,#040c1bea);padding:24px}#overlay[hidden]{display:none}.panel{width:100%;text-align:center;max-width:380px}.eyebrow,.hint{font-size:11px;letter-spacing:2px;color:#a6bdd8}h1{font-size:clamp(44px,12vw,76px);line-height:.86;letter-spacing:-4px;margin:18px 0 0;font-weight:950;font-style:italic;text-shadow:0 4px 0 #183ba0,0 0 24px #187aff}h1 i{color:#8ed6ff}#hero{height:min(25vh,220px);width:80%;object-fit:contain;filter:drop-shadow(0 10px 20px #007bff88);margin:14px 0}#message{font-size:18px;font-weight:650}#start,#share{width:100%;padding:16px;font-weight:850;letter-spacing:1px;margin:5px 0}#start{background:linear-gradient(135deg,#155eff,#008bd4);box-shadow:0 0 22px #1675ff66}#hint{position:absolute;bottom:max(15px,env(safe-area-inset-bottom));width:100%;text-align:center;color:#c1ddff;font-size:10px;letter-spacing:2px;pointer-events:none}button[hidden]{display:none}
 
 #game{-webkit-user-select:none;-webkit-touch-callout:none}#zone,#hint{pointer-events:none}
+header{gap:8px}
+header strong{font-size:clamp(14px,4.5vw,20px)}
+header small{letter-spacing:1px}
+header button{flex:0 0 36px;width:36px;height:36px}
+#zone{top:calc(max(12px,env(safe-area-inset-top)) + 66px)}
+#power{position:absolute;top:calc(max(12px,env(safe-area-inset-top)) + 87px);left:5%;right:5%;text-align:center;color:#ffe4fb;text-shadow:0 1px 6px #120820;font-weight:700;font-size:11px;letter-spacing:1px;pointer-events:none}
+#hero{height:min(20dvh,165px);margin:8px 0}
+.eyebrow{color:#a9d7ff;text-transform:uppercase;font-weight:700}
+#message{margin:8px 0}
+#result-zone,#share-status{font-size:11px;color:#c4d9f5;overflow-wrap:anywhere}
+#result-zone:empty,#share-status:empty{display:none}
+#start,#share,#save{padding:12px}
+.score-actions{display:flex;gap:8px}
+.score-actions button{flex:1;min-width:0;width:auto;margin:5px 0;font-size:12px;font-weight:750}
+.pickups{display:flex;justify-content:center;gap:12px;margin-top:12px;color:#d5e2fa}
+.pickups div{flex:1;display:grid;justify-items:center;align-content:start;font-size:11px}
+.pickups img{width:36px;height:36px}
+#overlay[data-mode="over"] .pickups,#overlay[data-mode="pause"] .pickups{display:none}
+@media(max-height:570px){
+ #overlay{padding:10px 19px}
+ h1{font-size:clamp(36px,9dvh,54px);margin-top:8px}
+ #hero{height:15dvh;margin:2px 0}
+ .pickups{margin-top:5px}
+ .pickups img{width:28px;height:28px}
+ .panel .hint{margin:6px 0}
+}

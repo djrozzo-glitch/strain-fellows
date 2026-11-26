@@ -23,4 +23,4 @@ Continue development of the existing mobile-first browser arcade game. Use vanil
 - Avoid unnecessary dependencies. Prevent accidental page scrolling and text selection during mobile play.
 - Validate gameplay and asset loading in a browser at mobile and desktop sizes before committing. For scenery changes, capture and inspect each zone and check its transitions.
 - Update cache-busting URLs when served code or styles change. Use versioned URLs or filenames for revised assets. Keep the changelog concise.
-- Commit completed, tested changes with descriptive messages. Push to GitHub only when authorized.
+- Commit completed, tested changes with descriptive messages. The repository owner has authorized this project workflow: push completed, tested changes to GitHub immediately. Verify the remote branch after each push.

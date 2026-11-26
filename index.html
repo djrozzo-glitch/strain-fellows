@@ -1,1 +1,47 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#071326"><title>Higher & Higher</title><link rel="stylesheet" href="style.css?v=3"></head><body><main id="game"><canvas id="field" aria-label="Vertical jumping game"></canvas><header><div><small>HEIGHT</small><strong id="height">0 m</strong></div><div><small>BEST</small><strong id="best">0 m</strong></div><button id="sound" aria-label="Toggle sound">♫</button><button id="pause" aria-label="Pause">Ⅱ</button></header><div id="zone"></div><section id="overlay"><div class="panel"><p class="eyebrow">A VERTICAL ARCADE</p><h1>HIGHER<br><i>& HIGHER</i></h1><img id="hero" src="assets/hero/jump/03.png" alt="Cyberpunk runner"><p id="message">How high can you go?</p><button id="start">TAP TO START ↑</button><button id="share" hidden>SHARE SCORE</button><p class="hint">Drag to move · Arrow keys / A D</p></div></section><footer id="hint">DRAG ANYWHERE TO MOVE</footer></main><script src="game.js?v=5"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#071326">
+  <title>Higher & Higher</title>
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <main id="game">
+    <canvas id="field" aria-label="Vertical jumping game"></canvas>
+    <header>
+      <div><small>HEIGHT</small><strong id="height">0 m</strong></div>
+      <div><small>BEST</small><strong id="best">0 m</strong></div>
+      <div><small>POINTS</small><strong id="points">0</strong></div>
+      <button id="sound" aria-label="Toggle sound">♫</button>
+      <button id="pause" aria-label="Pause">Ⅱ</button>
+    </header>
+    <div id="zone"></div>
+    <div id="power" aria-live="polite" hidden></div>
+    <section id="overlay">
+      <div class="panel">
+        <p class="eyebrow" id="brand"></p>
+        <h1>HIGHER<br><i>&amp; HIGHER</i></h1>
+        <img id="hero" src="assets/hero/idle/00.png" alt="Cyberpunk runner">
+        <p id="message">How high can you go?</p>
+        <p id="result-zone"></p>
+        <button id="start">START RUN</button>
+        <div class="score-actions">
+          <button id="share" hidden>SHARE SCORE</button>
+          <button id="save" hidden>SAVE CARD</button>
+        </div>
+        <p id="share-status" role="status"></p>
+        <div class="pickups" aria-label="Lounge pickups">
+          <div><img src="assets/collectibles/lounge/cookie.webp" alt=""><span>Glitch Cookie</span></div>
+          <div><img src="assets/collectibles/lounge/green-cloud.webp" alt=""><span>Green Cloud</span></div>
+          <div><img src="assets/collectibles/lounge/espresso.webp" alt=""><span>Espresso Shot</span></div>
+        </div>
+        <p class="hint">Drag to move · Arrow keys / A D</p>
+      </div>
+    </section>
+    <footer id="hint">DRAG ANYWHERE TO MOVE</footer>
+  </main>
+  <script src="game.js?v=6"></script>
+</body>
+</html>
