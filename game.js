@@ -5,7 +5,7 @@ try{best=Number(localStorage.getItem('higher-best'))||0}catch{} $('best').textCo
 const images={}, groups={};
 const paths = [
  "assets/collectibles/lounge/cookie.webp",
- "assets/collectibles/lounge/green-cloud.webp",
+ "assets/collectibles/lounge/green-cloud-bud.webp",
  "assets/collectibles/lounge/espresso.webp",
  "assets/collectibles/vfx/dust/02.png",
  "assets/hero/idle/00.png",
@@ -565,7 +565,7 @@ function drawPadMarker(q,y,color) {
 
 function drawPickup(item,y) {
  const color=pickupColors[item.type]||(item.glitch?pickupColors.cookie:null);
- if(color){
+ if(color&&item.type!=='green-cloud'){
   ctx.save();
   ctx.shadowColor=color;
   ctx.shadowBlur=8;
@@ -578,7 +578,13 @@ function drawPickup(item,y) {
  }
  if(pickupColors[item.type]){
   const bob=reduceMotion.matches?0:Math.sin(time*4+item.y*.04)*3;
-  paint(images['collectibles/lounge/'+item.type],item.x-21,y-21+bob,42,42);
+  if(item.type==='green-cloud'){
+   ctx.save();
+   ctx.shadowColor='#a5ffbd';
+   ctx.shadowBlur=7*scale;
+   paint(images['collectibles/lounge/green-cloud-bud'],item.x-21,y-21+bob,42,42);
+   ctx.restore();
+  }else paint(images['collectibles/lounge/'+item.type],item.x-21,y-21+bob,42,42);
  }else drawImg(item.type,item.x-13,y-13,26,26);
 }
 
@@ -603,7 +609,7 @@ function draw() {
   if(s.smoke){
    const size=52+(.66-s.life)*75;
    ctx.globalAlpha=s.life*.69;
-   ctx.filter='sepia(1) saturate(2) hue-rotate(76deg)';
+   ctx.filter='grayscale(1) brightness(1.55)';
    paint(sprite('collectibles/vfx/dust'),s.x-size/2,y-size*.4,size,size*.65);
    ctx.filter='none';
   }else{

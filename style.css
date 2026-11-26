@@ -18,6 +18,7 @@ header button{flex:0 0 36px;width:36px;height:36px}
 .pickups{display:flex;justify-content:center;gap:12px;margin-top:12px;color:#d5e2fa}
 .pickups div{flex:1;display:grid;justify-items:center;align-content:start;font-size:11px}
 .pickups img{width:36px;height:36px}
+.pickups img[src$="green-cloud-bud.webp"]{filter:drop-shadow(0 0 4px #a5ffbda0)}
 #overlay[data-mode="over"] .pickups,#overlay[data-mode="pause"] .pickups{display:none}
 @media(max-height:570px){
  #overlay{padding:10px 19px}

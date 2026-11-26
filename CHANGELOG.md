@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.5
+
+- Replaced the Green Cloud pickup art with the supplied image and a soft glow. Changed the lift trail to white smoke.
+
 ## 0.2.4
 
 - Added Glitch Cookie, Green Cloud and Espresso Shot pickups with bonus stars, a smoke-powered lift and a three-landing combo.
