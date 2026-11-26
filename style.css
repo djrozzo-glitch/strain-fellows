@@ -28,3 +28,6 @@ header button{flex:0 0 36px;width:36px;height:36px}
  .pickups img{width:28px;height:28px}
  .panel .hint{margin:6px 0}
 }
+
+#menu-sound{border-color:transparent;background:transparent;color:#b8d2ed;font-size:12px;padding:7px 11px}
+#menu-sound:focus-visible,#sound:focus-visible{outline:2px solid #8ed6ff;outline-offset:2px}

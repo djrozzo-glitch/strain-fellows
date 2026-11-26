@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.6
+
+- Added synthesized arcade sound cues for landings, pickups, combos, zone changes and results.
+- Added a sound control in the menu and saved the setting between runs.
+
 ## 0.2.5
 
 - Replaced the Green Cloud pickup art with the supplied image and a soft glow. Changed the lift trail to white smoke.
