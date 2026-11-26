@@ -2,12 +2,93 @@
 const $=id=>document.getElementById(id), canvas=$('field'), ctx=canvas.getContext('2d');
 const W=400; let H=720, scale=1, state='menu', best=0, sound=false, audio, last=0, camera=0, peak=0, points=0, platforms=[], items=[], particles=[], player, nextY, lastX, time=0, pointer=null, keys=new Set();
 try{best=Number(localStorage.getItem('higher-best'))||0}catch{} $('best').textContent=best+' m';
-const images={}, groups={}; const paths=["assets/hero/idle/00.png","assets/hero/idle/01.png","assets/hero/idle/02.png","assets/hero/idle/03.png","assets/hero/idle/04.png","assets/hero/idle/05.png","assets/hero/idle/06.png","assets/hero/idle/07.png","assets/hero/jump/00.png","assets/hero/jump/01.png","assets/hero/jump/02.png","assets/hero/jump/03.png","assets/hero/jump/04.png","assets/hero/jump/05.png","assets/hero/jump/06.png","assets/hero/jump/07.png","assets/hero/fall/00.png","assets/hero/fall/01.png","assets/hero/fall/02.png","assets/hero/fall/03.png","assets/hero/fall/04.png","assets/hero/fall/05.png","assets/hero/fall/06.png","assets/hero/fall/07.png","assets/hero/boost/00.png","assets/hero/boost/01.png","assets/hero/boost/02.png","assets/hero/boost/03.png","assets/hero/boost/04.png","assets/hero/boost/05.png","assets/hero/boost/06.png","assets/hero/boost/07.png","assets/platforms/normal/00.png","assets/platforms/normal/01.png","assets/platforms/normal/02.png","assets/platforms/normal/03.png","assets/platforms/moving/00.png","assets/platforms/moving/01.png","assets/platforms/moving/02.png","assets/platforms/moving/03.png","assets/platforms/breakable/00.png","assets/platforms/breakable/01.png","assets/platforms/breakable/02.png","assets/platforms/breakable/03.png","assets/platforms/boost/00.png","assets/platforms/boost/01.png","assets/platforms/boost/02.png","assets/platforms/boost/03.png","assets/collectibles/coin/00.png","assets/collectibles/coin/01.png","assets/collectibles/coin/02.png","assets/collectibles/coin/03.png","assets/collectibles/coin/04.png","assets/collectibles/star/00.png","assets/collectibles/star/01.png","assets/collectibles/star/02.png","assets/collectibles/star/03.png","assets/collectibles/spring/00.png","assets/collectibles/spring/01.png","assets/collectibles/spring/02.png","assets/collectibles/spring/03.png","assets/collectibles/rocket/00.png","assets/collectibles/rocket/01.png","assets/collectibles/rocket/02.png","assets/collectibles/rocket/03.png","assets/collectibles/vfx/dust/00.png","assets/collectibles/vfx/dust/01.png","assets/collectibles/vfx/dust/02.png","assets/collectibles/vfx/dust/03.png","assets/collectibles/vfx/dust/04.png","assets/collectibles/vfx/trail/00.png","assets/collectibles/vfx/trail/01.png","assets/collectibles/vfx/trail/02.png","assets/collectibles/vfx/trail/03.png","assets/collectibles/vfx/spark/00.png","assets/collectibles/vfx/spark/01.png","assets/collectibles/vfx/spark/02.png","assets/collectibles/vfx/spark/03.png","assets/collectibles/vfx/spark/04.png","assets/collectibles/vfx/spark/05.png","assets/ui/score.png","assets/ui/height.png","assets/ui/combo.png","assets/ui/pause.png","assets/ui/panel.png","assets/ui/play.png","assets/ui/restart.png","assets/ui/leaderboard.png","assets/ui/share.png","assets/ui/gold_trophy.png","assets/ui/silver_trophy.png","assets/ui/bronze_trophy.png","assets/ui/gold_crown.png","assets/ui/silver_crown.png","assets/ui/bronze_crown.png","assets/ui/star_on.png","assets/ui/star_half.png","assets/ui/star_off.png","assets/ui/chevrons.png","assets/ui/meter.png","assets/ui/footer.png","assets/ui/bar_on.png","assets/ui/bar_off.png","assets/ui/corners.png","assets/ui/impact.png","assets/ui/cloud.png","assets/ui/spark.png","assets/ui/rings.png","assets/ui/vortex.png","assets/ui/speed.png","assets/environment/sky/night.png","assets/environment/sky/twilight.png","assets/environment/sky/moon.png","assets/environment/sky/space.png","assets/environment/sky/cloud_city.png","assets/environment/lounge/counter.png","assets/environment/lounge/window.png","assets/environment/lounge/sofa.png","assets/environment/lounge/table.png","assets/environment/lounge/lamp.png","assets/environment/lounge/panel.png","assets/environment/lounge/column.png","assets/environment/lounge/plant.png","assets/environment/roof/gable_1.png","assets/environment/roof/gable_2.png","assets/environment/roof/gable_3.png","assets/environment/roof/tiles.png","assets/environment/roof/gable_4.png","assets/environment/roof/chimneys.png","assets/environment/roof/lamp.png","assets/environment/roof/antenna.png","assets/environment/clouds/cluster_1.png","assets/environment/clouds/cluster_2.png","assets/environment/islands/cluster_1.png","assets/environment/islands/cluster_2.png","assets/environment/islands/cluster_3.png","assets/environment/props/pipes.png","assets/environment/props/railing.png","assets/environment/props/wall.png","assets/environment/props/vent.png","assets/environment/props/ac.png","assets/environment/props/skylight.png","assets/environment/props/chimney.png","assets/environment/props/lights.png","assets/environment/props/awning.png","assets/environment/props/neon.png"];
-for(const path of paths){const key=path.replace(/^assets\//,'').replace(/\.png$/,'');const i=new Image();i.src=path;images[key]=i;const group=key.replace(/\/\d+$/,'');(groups[group] ||= []).push(i);}
+const images={}, groups={};
+const paths = [
+ "assets/hero/idle/00.png",
+ "assets/hero/idle/01.png",
+ "assets/hero/idle/02.png",
+ "assets/hero/idle/03.png",
+ "assets/hero/idle/04.png",
+ "assets/hero/idle/05.png",
+ "assets/hero/idle/06.png",
+ "assets/hero/idle/07.png",
+ "assets/hero/jump/00.png",
+ "assets/hero/jump/01.png",
+ "assets/hero/jump/02.png",
+ "assets/hero/jump/03.png",
+ "assets/hero/jump/04.png",
+ "assets/hero/jump/05.png",
+ "assets/hero/jump/06.png",
+ "assets/hero/jump/07.png",
+ "assets/hero/fall/00.png",
+ "assets/hero/fall/01.png",
+ "assets/hero/fall/02.png",
+ "assets/hero/fall/03.png",
+ "assets/hero/fall/04.png",
+ "assets/hero/fall/05.png",
+ "assets/hero/fall/06.png",
+ "assets/hero/fall/07.png",
+ "assets/hero/boost/00.png",
+ "assets/hero/boost/01.png",
+ "assets/hero/boost/02.png",
+ "assets/hero/boost/03.png",
+ "assets/hero/boost/04.png",
+ "assets/hero/boost/05.png",
+ "assets/hero/boost/06.png",
+ "assets/hero/boost/07.png",
+ "assets/platforms/normal/00.png",
+ "assets/platforms/normal/01.png",
+ "assets/platforms/normal/02.png",
+ "assets/platforms/normal/03.png",
+ "assets/platforms/moving/00.png",
+ "assets/platforms/moving/01.png",
+ "assets/platforms/moving/02.png",
+ "assets/platforms/moving/03.png",
+ "assets/platforms/breakable/00.png",
+ "assets/platforms/breakable/01.png",
+ "assets/platforms/breakable/02.png",
+ "assets/platforms/breakable/03.png",
+ "assets/platforms/boost/00.png",
+ "assets/platforms/boost/01.png",
+ "assets/platforms/boost/02.png",
+ "assets/platforms/boost/03.png",
+ "assets/collectibles/coin/00.png",
+ "assets/collectibles/coin/01.png",
+ "assets/collectibles/coin/02.png",
+ "assets/collectibles/coin/03.png",
+ "assets/collectibles/coin/04.png",
+ "assets/collectibles/star/00.png",
+ "assets/collectibles/star/01.png",
+ "assets/collectibles/star/02.png",
+ "assets/collectibles/star/03.png",
+ "assets/collectibles/spring/00.png",
+ "assets/collectibles/spring/01.png",
+ "assets/collectibles/spring/02.png",
+ "assets/collectibles/spring/03.png",
+ "assets/collectibles/rocket/00.png",
+ "assets/collectibles/rocket/01.png",
+ "assets/collectibles/rocket/02.png",
+ "assets/collectibles/rocket/03.png",
+ "assets/environment/lounge/sofa.png",
+ "assets/environment/lounge/window.png",
+ "assets/environment/lounge/counter.png",
+ "assets/environment/lounge/lamp.png",
+ "assets/environment/lounge/table.png",
+ "assets/environment/composed/cloud-bank.webp",
+ "assets/environment/composed/cloud-high.webp",
+ "assets/environment/composed/cloud-low.webp",
+ "assets/environment/composed/islands.webp",
+ "assets/environment/composed/moon.webp",
+ "assets/environment/composed/night.webp",
+ "assets/environment/composed/planet.webp",
+ "assets/environment/composed/roofs.webp",
+ "assets/environment/composed/street.webp",
+ "assets/environment/composed/twilight.webp",
+];
+for(const path of paths){const key=path.replace(/^assets\//,'').replace(/\.(png|webp)$/,'');const i=new Image();i.src=path;images[key]=i;const group=key.replace(/\/\d+$/,'');(groups[group] ||= []).push(i);}
 function sprite(group,frame=0){const a=groups[group]||[];return a[frame%a.length]||a[0]}
 function ready(i){return i&&i.complete&&i.naturalWidth>0}
 function paint(i,x,y,w,h){if(ready(i))ctx.drawImage(i,x,y,w,h)}
-function prop(group,x,y,w){const i=sprite(group);if(ready(i))paint(i,x,y,w,w*i.naturalHeight/i.naturalWidth)}
 function resize(){const r=canvas.getBoundingClientRect(); H=W*r.height/r.width;const d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);scale=canvas.width/W;ctx.setTransform(scale,0,0,scale,0,0)}
 new ResizeObserver(resize).observe(canvas);resize();
 function beep(f=440){if(!sound)return;try{audio ||= new (window.AudioContext||window.webkitAudioContext)();audio.resume();const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.setValueAtTime(f,audio.currentTime);o.frequency.exponentialRampToValueAtTime(f*1.5,audio.currentTime+.09);g.gain.setValueAtTime(.035,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.14);o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+.15)}catch{}}
@@ -22,61 +103,132 @@ function px(e){return (e.clientX-canvas.getBoundingClientRect().left)*W/canvas.g
 function spark(x,y,color='#63d7ff',n=9){for(let i=0;i<n;i++)particles.push({x,y,vx:(Math.random()-.5)*180,vy:Math.random()*170,life:.45,color})}
 function update(dt){time+=dt;const p=player;let dir=(keys.has('arrowright')||keys.has('d')?1:0)-(keys.has('arrowleft')||keys.has('a')?1:0);let target=dir*285;if(pointer){let diff=pointer.target-p.x;while(diff>W/2)diff-=W;while(diff<-W/2)diff+=W;target=Math.max(-340,Math.min(340,diff*14))}p.vx+=(target-p.vx)*Math.min(1,dt*15);p.x+=p.vx*dt;if(p.x<0)p.x+=W;if(p.x>=W)p.x-=W;if(pointer){while(pointer.target<0)pointer.target+=W;while(pointer.target>=W)pointer.target-=W;}const prev=p.y;p.vy-=1500*dt;p.y+=p.vy*dt;p.boost=Math.max(0,p.boost-dt);for(const q of platforms){if(q.type==='moving')q.x=Math.max(q.w/2,Math.min(W-q.w/2,q.base+Math.sin(time*1.65+q.phase)*37));if(!q.dead&&p.vy<0&&prev>=q.y&&p.y<=q.y&&Math.min(Math.abs(p.x-q.x),W-Math.abs(p.x-q.x))<q.w/2+12){p.y=q.y;p.vy=q.type==='boost'?940:650;if(q.type==='boost')p.boost=.65;if(q.type==='breakable'){q.dead=true;particles.push({x:q.x,y:q.y,vx:0,vy:0,life:.45,color:'#69dfff',broken:true,w:q.w})}spark(p.x,p.y,q.type==='boost'?'#ffde8a':'#5acfff');beep(q.type==='boost'?690:330);break;}}
 for(const i of items){if(!i.dead&&Math.abs(p.y+25-i.y)<32&&Math.min(Math.abs(p.x-i.x),W-Math.abs(p.x-i.x))<26){i.dead=true;points+=i.type==='star'?50:10;if(i.type==='spring'||i.type==='rocket'){p.vy=i.type==='rocket'?1100:900;p.boost=.75}spark(i.x,i.y,'#ffdb85',14);beep(760)}}
-peak=Math.max(peak,Math.floor(p.y/10));camera=Math.max(camera,p.y-H*.43);generate();platforms=platforms.filter(q=>q.y>camera-180&&!q.dead);items=items.filter(i=>i.y>camera-180&&!i.dead);for(const s of particles){s.x+=s.vx*dt;s.y+=s.vy*dt;s.vy-=250*dt;s.life-=dt}particles=particles.filter(s=>s.life>0);$('height').textContent=peak+' m';$('zone').textContent=peak<100?'THE LOUNGE':peak<350?'ROOFTOPS':peak<750?'CLOUD CITY':'DEEP SPACE';if(peak>20)$('hint').style.opacity='0';if(p.y<camera-100)finish();}
+peak=Math.max(peak,Math.floor(p.y/10));camera=Math.max(camera,p.y-H*.43);generate();platforms=platforms.filter(q=>q.y>camera-180&&!q.dead);items=items.filter(i=>i.y>camera-180&&!i.dead);for(const s of particles){s.x+=s.vx*dt;s.y+=s.vy*dt;s.vy-=250*dt;s.life-=dt}particles=particles.filter(s=>s.life>0);$('height').textContent=peak+' m';const zone=zoneAt(peak).label;if($('zone').textContent!==zone)$('zone').textContent=zone;if(peak>20)$('hint').style.opacity='0';if(p.y<camera-100)finish();}
 function drawImg(name,x,y,w,h){let group=name.startsWith('hero-')?'hero/'+name.slice(5):name.startsWith('platform-')?'platforms/'+name.slice(9):'collectibles/'+name;let frame=Math.floor(time*8);if(group==='platforms/breakable')frame=0;if(group==='hero/jump')frame=Math.max(1,Math.min(5,Math.floor((650-player.vy)/140)+1));if(group==='hero/fall')frame=Math.min(5,Math.floor(Math.abs(player.vy)/150));const i=sprite(group,frame);if(ready(i)){const ratio=i.naturalWidth/i.naturalHeight;let dw=w,dh=w/ratio;if(group.startsWith('hero/')){dh=h;dw=dh*ratio;paint(i,x+(w-dw)/2,y,dw,dh)}else if(group.startsWith('platforms/')){paint(i,x,y,dw,dh)}else{dh=Math.min(h,w/ratio);dw=dh*ratio;paint(i,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}}else{ctx.fillStyle=group.startsWith('hero/')?'#69dfff':group.startsWith('platforms/')?'#258aff':'#f9d874';ctx.fillRect(x,y,w,h)}}
-function hash(n){let a=Math.sin(n*127.1+311.7)*43758.5453;return a-Math.floor(a)}
-// Fade only the outer edges of scenery sprites once, not every frame.
-const sceneryCache=new Map();
+const zones = [
+ {label:'THE LOUNGE', center:0, top:[8,14,34], bottom:[23,28,54]},
+ {label:'DUTCH STREETS', center:80, top:[9,18,47], bottom:[31,44,80]},
+ {label:'ROOFTOPS', center:225, top:[12,18,52], bottom:[54,49,99]},
+ {label:'CLOUD CITY', center:505, top:[12,23,61], bottom:[52,69,117]},
+ {label:'DEEP SPACE', center:920, top:[4,6,26], bottom:[24,20,62]},
+ {label:'ANOTHER DIMENSION', center:1450, top:[15,6,37], bottom:[51,24,84]},
+];
+
+function smooth(from,to,value){
+ const t=Math.max(0,Math.min(1,(value-from)/(to-from)));
+ return t*t*(3-2*t);
+}
+function zoneAt(altitude){
+ let i=0;
+ while(i<zones.length-1&&altitude>=(zones[i].center+zones[i+1].center)/2)i++;
+ return zones[i];
+}
+function hash(n){const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x)}
 function scenery(name,x,y,w,alpha=1){
- const im=sprite(name);if(!ready(im)||alpha<=0)return;
- let layer=sceneryCache.get(name);
- if(!layer){
-  layer=document.createElement('canvas');layer.width=im.naturalWidth;layer.height=im.naturalHeight;
-  const c=layer.getContext('2d'), sw=layer.width,sh=layer.height;c.drawImage(im,0,0);
-  c.globalCompositeOperation='destination-in';
-  const gx=c.createLinearGradient(0,0,sw,0);gx.addColorStop(0,'transparent');gx.addColorStop(.065,'black');gx.addColorStop(.935,'black');gx.addColorStop(1,'transparent');c.fillStyle=gx;c.fillRect(0,0,sw,sh);
-  const gy=c.createLinearGradient(0,0,0,sh);gy.addColorStop(0,'transparent');gy.addColorStop(.055,'black');gy.addColorStop(.945,'black');gy.addColorStop(1,'transparent');c.fillStyle=gy;c.fillRect(0,0,sw,sh);sceneryCache.set(name,layer);
- }
- ctx.globalAlpha=alpha;ctx.drawImage(layer,x,y,w,w*layer.height/layer.width);ctx.globalAlpha=1;
+ const image=images['environment/'+name];
+ if(!ready(image)||alpha<.004)return;
+ ctx.globalAlpha=alpha;
+ ctx.drawImage(image,x,y,w,w*image.naturalHeight/image.naturalWidth);
+ ctx.globalAlpha=1;
 }
+function wash(top,bottom,y=0,height=H){
+ if(height<=0)return;
+ const gradient=ctx.createLinearGradient(0,y,0,y+height);
+ gradient.addColorStop(0,top);
+ gradient.addColorStop(1,bottom);
+ ctx.fillStyle=gradient;
+ ctx.fillRect(0,y,W,height);
+}
+function skyline(name,width,base,alpha){
+ const image=images['environment/composed/'+name];
+ if(!ready(image)||alpha<.004)return;
+ const height=width*image.naturalHeight/image.naturalWidth;
+ scenery('composed/'+name,(W-width)/2,base-height,width,alpha);
+ // Extend the dark ground plane if the architecture is fully inside the viewport.
+ if(base<H){
+  ctx.globalAlpha=alpha;
+  wash('#0b1025','#080d21',base,H-base);
+  ctx.globalAlpha=1;
+ }
+}
+function drifting(group,sizes,speed,alpha,seed){
+ if(alpha<.004)return;
+ const padding=300;
+ const span=H+padding*2;
+ for(let i=0;i<group.length;i++){
+  const w=sizes[i];
+  const x=(i%2 ? W-w*.8 : -w*.22)+(hash(seed+i)-.5)*60;
+  const y=(span*(i+.28)/group.length+camera*speed)%span-padding;
+  scenery('composed/'+group[i],x,y,w,alpha);
+ }
+}
+function lounge(alpha){
+ if(alpha<.004)return;
+ const floor=H-66+camera*.2;
+ const ceiling=floor-324;
+ ctx.globalAlpha=alpha;
+ wash('#131e3d','#0c132b',0,Math.min(H,floor));
+ wash('#181e39','#080f25',floor,Math.max(0,H-floor));
+ ctx.fillStyle='#202e4b';
+ ctx.fillRect(0,ceiling,W,2);
+ ctx.fillRect(0,floor-2,W,2);
+ ctx.globalAlpha=1;
+ scenery('lounge/sofa',234,floor-177,218,alpha*.83);
+ scenery('lounge/window',37,floor-228,121,alpha*.74);
+ scenery('lounge/counter',-33,floor-122,305,alpha*.87);
+ scenery('lounge/lamp',92,ceiling,52,alpha*.74);
+ scenery('lounge/table',277,floor-62,99,alpha*.82);
+}
+
 function bg(){
- const z=Math.max(0,camera/10);
- const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
- const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
- const rgb=v=>'rgb('+v.join(',')+')';
- let top=mix([8,17,40],[19,36,101],smooth(40,350,z)),bottom=mix([35,62,107],[80,124,193],smooth(40,350,z));
- top=mix(top,[3,5,26],smooth(650,1050,z));bottom=mix(bottom,[36,27,83],smooth(650,1050,z));
- const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,rgb(top));g.addColorStop(1,rgb(bottom));ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
- const nebula=ctx.createRadialGradient(W*.76,H*.27,0,W*.76,H*.27,W*.9);nebula.addColorStop(0,'rgba(118,102,255,.26)');nebula.addColorStop(1,'rgba(118,102,255,0)');ctx.fillStyle=nebula;ctx.fillRect(0,0,W,H);
- for(let i=0;i<80;i++){let y=((hash(i+300)*H+camera*.045)%H+H)%H,x=hash(i)*W;ctx.fillStyle='rgba(192,225,255,'+(.10+hash(i+80)*.52)+')';ctx.beginPath();ctx.arc(x,y,hash(i+40)*1.25+.25,0,Math.PI*2);ctx.fill()}
- // Continuous repeating world-space bands, with offscreen wrap margins.
- function band(group,count,speed,minW,maxW,alpha,seed){
-  if(alpha<=.005)return;
-  const spacing=Math.max(130,(H+440)/count),span=spacing*count;
-  for(let j=0;j<count;j++){
-   const w=minW+(maxW-minW)*hash(seed+j*3);
-   const y=((j*spacing+camera*speed)%span+span)%span-220;
-   const x=(j%2===0?-w*.22:W-w*.77)+(hash(seed+j*5+1)-.5)*55;
-   scenery(group(j),x,y,w,alpha*(.8+.2*hash(seed+j+70)));
+ const altitude=peak;
+ let i=0;
+ while(i<zones.length-2&&altitude>zones[i+1].center)i++;
+ const a=zones[i],b=zones[i+1],blend=smooth(a.center,b.center,altitude);
+ const color=key=>'rgb('+a[key].map((v,j)=>Math.round(v+(b[key][j]-v)*blend)).join(',')+')';
+ wash(color('top'),color('bottom'));
+
+ const stars=smooth(185,840,altitude);
+ if(stars>0){
+  for(let j=0;j<65;j++){
+   const y=(hash(j+300)*H+camera*.023)%H;
+   ctx.globalAlpha=stars*(.19+hash(j+85)*.64);
+   ctx.fillStyle='#cde1ff';
+   const size=.65+hash(j+160)*1.35;
+   ctx.fillRect(hash(j)*W,y,size,size);
   }
+  ctx.globalAlpha=1;
  }
- const city=smooth(170,340,z)*(1-smooth(850,1200,z));
- const cloud=smooth(50,150,z)*(1-smooth(780,1150,z));
- // Layer 1: a large distant moon and floating city silhouettes.
- const moon=smooth(390,650,z)*(1-smooth(1300,1800,z));
- if(moon>0){const cx=W*.78,cy=H*.21,r=W*.24;ctx.globalAlpha=moon*.34;const m=ctx.createRadialGradient(cx-r*.3,cy-r*.4,0,cx,cy,r);m.addColorStop(0,'#c1d9ff');m.addColorStop(.6,'#688be0');m.addColorStop(1,'#324d9a');ctx.fillStyle=m;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1}
- band(j=>'environment/islands/cluster_'+(1+j%3),5,.035,175,280,city*.40,110);
- // Layer 2: illustrated cloud banks, alternating sides to keep the route readable.
- band(j=>'environment/clouds/cluster_'+(1+j%2),6,.085,180,285,cloud*.55,220);
- band(j=>'environment/islands/cluster_'+(1+(j+1)%3),3,.14,120,190,city*.63,330);
- // Layer 3: closer wisps, mostly along the edges.
- band(j=>'environment/clouds/cluster_'+(1+(j+1)%2),4,.20,135,210,cloud*.38,440);
- const roofs=smooth(8,40,z)*(1-smooth(170,340,z));
- band(j=>'environment/roof/'+['gable_1','gable_2','gable_3','gable_4','tiles','chimneys'][j%6],6,.12,115,180,roofs*.78,550);
- const lounge=1-smooth(20,110,z);
- if(lounge>0){scenery('environment/lounge/window',35,H-350+camera*.24,150,lounge*.7);scenery('environment/lounge/sofa',210,H-260+camera*.24,185,lounge*.9);scenery('environment/lounge/counter',-10,H-205+camera*.24,320,lounge);scenery('environment/lounge/table',285,H-130+camera*.24,110,lounge)}
- const space=smooth(750,1100,z);
- if(space>0){for(let j=0;j<3;j++){const x=W*(.18+.32*j),y=((hash(j+800)* (H+300)+camera*.025)%(H+300))-150,r=35+j*13;const p=ctx.createRadialGradient(x-r*.35,y-r*.35,0,x,y,r);p.addColorStop(0,'rgba(142,140,231,'+space*.55+')');p.addColorStop(.7,'rgba(69,66,158,'+space*.38+')');p.addColorStop(1,'rgba(40,27,100,0)');ctx.fillStyle=p;ctx.fillRect(x-r,y-r,r*2,r*2)}}
+ const cloudCity=smooth(250,440,altitude)*(1-smooth(570,800,altitude));
+ const space=smooth(585,845,altitude)*(1-smooth(1130,1370,altitude));
+ const dimension=smooth(1110,1430,altitude);
+ const celestialY=H*.04+90*(1-Math.exp(-camera/8200));
+ scenery('composed/moon',-173,celestialY-28,710,cloudCity*.74);
+ scenery('composed/planet',-146,celestialY-38,710,space*.95);
+ // Colorize the existing illustrated planet for the final zone.
+ if(dimension>.004){
+  ctx.filter='hue-rotate(54deg)';
+  scenery('composed/planet',-248,0,870,dimension*.89);
+  ctx.filter='none';
+ }
+
+ const city=smooth(13,67,altitude)*(1-smooth(255,415,altitude));
+ const streetShift=Math.min(150,camera*.11);
+ skyline('night',W*1.48,H-126+streetShift*.43,city*.83);
+ skyline('twilight',W*1.42,H-73+streetShift*.9,city*.77*smooth(63,157,altitude));
+ const street=city*(1-smooth(107,226,altitude));
+ const roofs=city*smooth(92,197,altitude);
+ skyline('street',W*1.15,H+37+streetShift*.43,street*.86);
+ skyline('roofs',W*1.16,H+24+streetShift*.5,roofs*.80);
+
+ const clouds=smooth(122,365,altitude)*(1-smooth(595,835,altitude));
+ drifting(['cloud-high','cloud-low','cloud-bank','cloud-high'],[270,260,390,310],.048,clouds*.39,130);
+ drifting(['islands','islands'],[233,285],.076,cloudCity*.82*smooth(363,455,altitude),210);
+ drifting(['cloud-bank','cloud-low','cloud-high'],[290,225,260],.15,clouds*.32,330);
+ drifting(['islands','islands'],[188,240],.044,dimension*.48*smooth(1185,1425,altitude),420);
+
+ lounge(1-smooth(13,73,altitude));
+ wash('rgba(4,9,26,.28)','rgba(6,10,26,.16)');
 }
-function draw(){ctx.setTransform(scale,0,0,scale,0,0);bg();const sy=y=>H-100-(y-camera);for(const q of platforms){const y=sy(q.y);if(y<-40||y>H+40)continue;drawImg('platform-'+q.type,q.x-q.w/2,y-2,q.w,24)}for(const i of items){const y=sy(i.y);drawImg(i.type,i.x-13,y-13,26,26)}for(const s of particles){ctx.globalAlpha=s.life/.45;ctx.fillStyle=s.color;if(s.broken){const i=sprite('platforms/breakable',Math.min(3,1+Math.floor((.45-s.life)*7)));paint(i,s.x-s.w/2,sy(s.y),s.w,s.w*.34)}else ctx.fillRect(s.x,sy(s.y),3,3)}ctx.globalAlpha=1;if(player){let p=player,y=sy(p.y),name=p.boost>0?'boost':p.vy>0?'jump':'fall';for(const x of [p.x,p.x-W,p.x+W]){if(x<-30||x>W+30)continue;ctx.save();ctx.translate(x,y);if(p.vx<-15)ctx.scale(-1,1);drawImg('hero-'+name,-28,-66,56,70);ctx.restore()}}}
+function draw(){ctx.setTransform(scale,0,0,scale,0,0);bg();const sy=y=>H-100-(y-camera);for(const q of platforms){const y=sy(q.y);if(y<-40||y>H+40)continue;drawImg('platform-'+q.type,q.x-q.w/2,y-2,q.w,24)}for(const i of items){const y=sy(i.y);drawImg(i.type,i.x-13,y-13,26,26)}for(const s of particles){ctx.globalAlpha=s.life/.45;ctx.fillStyle=s.color;if(s.broken){const i=sprite('platforms/breakable',Math.min(3,1+Math.floor((.45-s.life)*7)));paint(i,s.x-s.w/2,sy(s.y),s.w,s.w*.34)}else ctx.fillRect(s.x,sy(s.y),3,3)}ctx.globalAlpha=1;if(player){let p=player,y=sy(p.y),name=p.boost>0?'boost':p.vy>0?'jump':'fall';for(const x of [p.x,p.x-W,p.x+W]){if(x<-40||x>W+40)continue;ctx.save();ctx.translate(x,y);if(p.vx<-15)ctx.scale(-1,1);drawImg('hero-'+name,-35,-83.5,70,87.5);ctx.restore()}}}
 function frame(t){let dt=Math.min(.04,Math.max(0,(t-last)/1000));last=t;if(state==='play'){for(let n=0;n<3;n++)if(state==='play')update(dt/3)}draw();requestAnimationFrame(frame)}reset();overlay('menu');requestAnimationFrame(frame);
