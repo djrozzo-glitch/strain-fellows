@@ -1,0 +1,2192 @@
+{
+  "assets/hero/idle/00": {
+    "file": "assets/hero/idle/00.png",
+    "width": 224,
+    "height": 250,
+    "source_rect": [
+      0,
+      0,
+      224,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/01": {
+    "file": "assets/hero/idle/01.png",
+    "width": 185,
+    "height": 250,
+    "source_rect": [
+      224,
+      0,
+      409,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/02": {
+    "file": "assets/hero/idle/02.png",
+    "width": 186,
+    "height": 250,
+    "source_rect": [
+      409,
+      0,
+      595,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/03": {
+    "file": "assets/hero/idle/03.png",
+    "width": 185,
+    "height": 250,
+    "source_rect": [
+      595,
+      0,
+      780,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/04": {
+    "file": "assets/hero/idle/04.png",
+    "width": 185,
+    "height": 250,
+    "source_rect": [
+      780,
+      0,
+      965,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/05": {
+    "file": "assets/hero/idle/05.png",
+    "width": 185,
+    "height": 250,
+    "source_rect": [
+      965,
+      0,
+      1150,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/06": {
+    "file": "assets/hero/idle/06.png",
+    "width": 185,
+    "height": 250,
+    "source_rect": [
+      1150,
+      0,
+      1335,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/idle/07": {
+    "file": "assets/hero/idle/07.png",
+    "width": 201,
+    "height": 250,
+    "source_rect": [
+      1335,
+      0,
+      1536,
+      250
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/00": {
+    "file": "assets/hero/jump/00.png",
+    "width": 224,
+    "height": 262,
+    "source_rect": [
+      0,
+      250,
+      224,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/01": {
+    "file": "assets/hero/jump/01.png",
+    "width": 185,
+    "height": 262,
+    "source_rect": [
+      224,
+      250,
+      409,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/02": {
+    "file": "assets/hero/jump/02.png",
+    "width": 186,
+    "height": 262,
+    "source_rect": [
+      409,
+      250,
+      595,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/03": {
+    "file": "assets/hero/jump/03.png",
+    "width": 185,
+    "height": 262,
+    "source_rect": [
+      595,
+      250,
+      780,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/04": {
+    "file": "assets/hero/jump/04.png",
+    "width": 185,
+    "height": 262,
+    "source_rect": [
+      780,
+      250,
+      965,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/05": {
+    "file": "assets/hero/jump/05.png",
+    "width": 185,
+    "height": 262,
+    "source_rect": [
+      965,
+      250,
+      1150,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/06": {
+    "file": "assets/hero/jump/06.png",
+    "width": 185,
+    "height": 262,
+    "source_rect": [
+      1150,
+      250,
+      1335,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/jump/07": {
+    "file": "assets/hero/jump/07.png",
+    "width": 201,
+    "height": 262,
+    "source_rect": [
+      1335,
+      250,
+      1536,
+      512
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/00": {
+    "file": "assets/hero/fall/00.png",
+    "width": 224,
+    "height": 248,
+    "source_rect": [
+      0,
+      512,
+      224,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/01": {
+    "file": "assets/hero/fall/01.png",
+    "width": 185,
+    "height": 248,
+    "source_rect": [
+      224,
+      512,
+      409,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/02": {
+    "file": "assets/hero/fall/02.png",
+    "width": 186,
+    "height": 248,
+    "source_rect": [
+      409,
+      512,
+      595,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/03": {
+    "file": "assets/hero/fall/03.png",
+    "width": 185,
+    "height": 248,
+    "source_rect": [
+      595,
+      512,
+      780,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/04": {
+    "file": "assets/hero/fall/04.png",
+    "width": 185,
+    "height": 248,
+    "source_rect": [
+      780,
+      512,
+      965,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/05": {
+    "file": "assets/hero/fall/05.png",
+    "width": 185,
+    "height": 248,
+    "source_rect": [
+      965,
+      512,
+      1150,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/06": {
+    "file": "assets/hero/fall/06.png",
+    "width": 185,
+    "height": 248,
+    "source_rect": [
+      1150,
+      512,
+      1335,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/fall/07": {
+    "file": "assets/hero/fall/07.png",
+    "width": 201,
+    "height": 248,
+    "source_rect": [
+      1335,
+      512,
+      1536,
+      760
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/00": {
+    "file": "assets/hero/boost/00.png",
+    "width": 224,
+    "height": 264,
+    "source_rect": [
+      0,
+      760,
+      224,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/01": {
+    "file": "assets/hero/boost/01.png",
+    "width": 185,
+    "height": 264,
+    "source_rect": [
+      224,
+      760,
+      409,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/02": {
+    "file": "assets/hero/boost/02.png",
+    "width": 186,
+    "height": 264,
+    "source_rect": [
+      409,
+      760,
+      595,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/03": {
+    "file": "assets/hero/boost/03.png",
+    "width": 185,
+    "height": 264,
+    "source_rect": [
+      595,
+      760,
+      780,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/04": {
+    "file": "assets/hero/boost/04.png",
+    "width": 185,
+    "height": 264,
+    "source_rect": [
+      780,
+      760,
+      965,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/05": {
+    "file": "assets/hero/boost/05.png",
+    "width": 185,
+    "height": 264,
+    "source_rect": [
+      965,
+      760,
+      1150,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/06": {
+    "file": "assets/hero/boost/06.png",
+    "width": 185,
+    "height": 264,
+    "source_rect": [
+      1150,
+      760,
+      1335,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/hero/boost/07": {
+    "file": "assets/hero/boost/07.png",
+    "width": 201,
+    "height": 264,
+    "source_rect": [
+      1335,
+      760,
+      1536,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/platforms/normal/00": {
+    "file": "assets/platforms/normal/00.png",
+    "width": 360,
+    "height": 131,
+    "source_rect": [
+      0,
+      0,
+      444,
+      222
+    ],
+    "trim_offset": [
+      45,
+      73
+    ]
+  },
+  "assets/platforms/normal/01": {
+    "file": "assets/platforms/normal/01.png",
+    "width": 359,
+    "height": 131,
+    "source_rect": [
+      444,
+      0,
+      887,
+      222
+    ],
+    "trim_offset": [
+      45,
+      73
+    ]
+  },
+  "assets/platforms/normal/02": {
+    "file": "assets/platforms/normal/02.png",
+    "width": 358,
+    "height": 131,
+    "source_rect": [
+      887,
+      0,
+      1330,
+      222
+    ],
+    "trim_offset": [
+      46,
+      73
+    ]
+  },
+  "assets/platforms/normal/03": {
+    "file": "assets/platforms/normal/03.png",
+    "width": 358,
+    "height": 131,
+    "source_rect": [
+      1330,
+      0,
+      1774,
+      222
+    ],
+    "trim_offset": [
+      46,
+      73
+    ]
+  },
+  "assets/platforms/moving/00": {
+    "file": "assets/platforms/moving/00.png",
+    "width": 360,
+    "height": 123,
+    "source_rect": [
+      0,
+      222,
+      444,
+      444
+    ],
+    "trim_offset": [
+      45,
+      65
+    ]
+  },
+  "assets/platforms/moving/01": {
+    "file": "assets/platforms/moving/01.png",
+    "width": 359,
+    "height": 123,
+    "source_rect": [
+      444,
+      222,
+      887,
+      444
+    ],
+    "trim_offset": [
+      45,
+      65
+    ]
+  },
+  "assets/platforms/moving/02": {
+    "file": "assets/platforms/moving/02.png",
+    "width": 358,
+    "height": 123,
+    "source_rect": [
+      887,
+      222,
+      1330,
+      444
+    ],
+    "trim_offset": [
+      46,
+      65
+    ]
+  },
+  "assets/platforms/moving/03": {
+    "file": "assets/platforms/moving/03.png",
+    "width": 358,
+    "height": 123,
+    "source_rect": [
+      1330,
+      222,
+      1774,
+      444
+    ],
+    "trim_offset": [
+      46,
+      65
+    ]
+  },
+  "assets/platforms/breakable/00": {
+    "file": "assets/platforms/breakable/00.png",
+    "width": 362,
+    "height": 104,
+    "source_rect": [
+      0,
+      444,
+      444,
+      665
+    ],
+    "trim_offset": [
+      42,
+      59
+    ]
+  },
+  "assets/platforms/breakable/01": {
+    "file": "assets/platforms/breakable/01.png",
+    "width": 362,
+    "height": 115,
+    "source_rect": [
+      444,
+      444,
+      887,
+      665
+    ],
+    "trim_offset": [
+      42,
+      58
+    ]
+  },
+  "assets/platforms/breakable/02": {
+    "file": "assets/platforms/breakable/02.png",
+    "width": 361,
+    "height": 120,
+    "source_rect": [
+      887,
+      444,
+      1330,
+      665
+    ],
+    "trim_offset": [
+      43,
+      55
+    ]
+  },
+  "assets/platforms/breakable/03": {
+    "file": "assets/platforms/breakable/03.png",
+    "width": 362,
+    "height": 120,
+    "source_rect": [
+      1330,
+      444,
+      1774,
+      665
+    ],
+    "trim_offset": [
+      42,
+      58
+    ]
+  },
+  "assets/platforms/boost/00": {
+    "file": "assets/platforms/boost/00.png",
+    "width": 350,
+    "height": 104,
+    "source_rect": [
+      0,
+      665,
+      444,
+      887
+    ],
+    "trim_offset": [
+      50,
+      68
+    ]
+  },
+  "assets/platforms/boost/01": {
+    "file": "assets/platforms/boost/01.png",
+    "width": 350,
+    "height": 123,
+    "source_rect": [
+      444,
+      665,
+      887,
+      887
+    ],
+    "trim_offset": [
+      50,
+      49
+    ]
+  },
+  "assets/platforms/boost/02": {
+    "file": "assets/platforms/boost/02.png",
+    "width": 350,
+    "height": 169,
+    "source_rect": [
+      887,
+      665,
+      1330,
+      887
+    ],
+    "trim_offset": [
+      51,
+      3
+    ]
+  },
+  "assets/platforms/boost/03": {
+    "file": "assets/platforms/boost/03.png",
+    "width": 349,
+    "height": 157,
+    "source_rect": [
+      1330,
+      665,
+      1774,
+      887
+    ],
+    "trim_offset": [
+      51,
+      15
+    ]
+  },
+  "assets/collectibles/coin/00": {
+    "file": "assets/collectibles/coin/00.png",
+    "width": 97,
+    "height": 93,
+    "source_rect": [
+      0,
+      425,
+      129,
+      605
+    ],
+    "trim_offset": [
+      29,
+      63
+    ]
+  },
+  "assets/collectibles/coin/01": {
+    "file": "assets/collectibles/coin/01.png",
+    "width": 77,
+    "height": 91,
+    "source_rect": [
+      129,
+      425,
+      234,
+      605
+    ],
+    "trim_offset": [
+      21,
+      64
+    ]
+  },
+  "assets/collectibles/coin/02": {
+    "file": "assets/collectibles/coin/02.png",
+    "width": 41,
+    "height": 91,
+    "source_rect": [
+      234,
+      425,
+      322,
+      605
+    ],
+    "trim_offset": [
+      22,
+      64
+    ]
+  },
+  "assets/collectibles/coin/03": {
+    "file": "assets/collectibles/coin/03.png",
+    "width": 52,
+    "height": 91,
+    "source_rect": [
+      322,
+      425,
+      417,
+      605
+    ],
+    "trim_offset": [
+      16,
+      64
+    ]
+  },
+  "assets/collectibles/coin/04": {
+    "file": "assets/collectibles/coin/04.png",
+    "width": 99,
+    "height": 93,
+    "source_rect": [
+      417,
+      425,
+      536,
+      605
+    ],
+    "trim_offset": [
+      2,
+      63
+    ]
+  },
+  "assets/collectibles/star/00": {
+    "file": "assets/collectibles/star/00.png",
+    "width": 95,
+    "height": 87,
+    "source_rect": [
+      555,
+      425,
+      662,
+      605
+    ],
+    "trim_offset": [
+      8,
+      69
+    ]
+  },
+  "assets/collectibles/star/01": {
+    "file": "assets/collectibles/star/01.png",
+    "width": 104,
+    "height": 103,
+    "source_rect": [
+      662,
+      425,
+      772,
+      605
+    ],
+    "trim_offset": [
+      6,
+      55
+    ]
+  },
+  "assets/collectibles/star/02": {
+    "file": "assets/collectibles/star/02.png",
+    "width": 134,
+    "height": 165,
+    "source_rect": [
+      772,
+      425,
+      906,
+      605
+    ],
+    "trim_offset": [
+      0,
+      15
+    ]
+  },
+  "assets/collectibles/star/03": {
+    "file": "assets/collectibles/star/03.png",
+    "width": 115,
+    "height": 103,
+    "source_rect": [
+      906,
+      425,
+      1031,
+      605
+    ],
+    "trim_offset": [
+      0,
+      55
+    ]
+  },
+  "assets/collectibles/spring/00": {
+    "file": "assets/collectibles/spring/00.png",
+    "width": 84,
+    "height": 65,
+    "source_rect": [
+      1095,
+      425,
+      1208,
+      605
+    ],
+    "trim_offset": [
+      16,
+      90
+    ]
+  },
+  "assets/collectibles/spring/01": {
+    "file": "assets/collectibles/spring/01.png",
+    "width": 89,
+    "height": 85,
+    "source_rect": [
+      1208,
+      425,
+      1321,
+      605
+    ],
+    "trim_offset": [
+      10,
+      70
+    ]
+  },
+  "assets/collectibles/spring/02": {
+    "file": "assets/collectibles/spring/02.png",
+    "width": 88,
+    "height": 146,
+    "source_rect": [
+      1321,
+      425,
+      1439,
+      605
+    ],
+    "trim_offset": [
+      12,
+      9
+    ]
+  },
+  "assets/collectibles/spring/03": {
+    "file": "assets/collectibles/spring/03.png",
+    "width": 84,
+    "height": 85,
+    "source_rect": [
+      1439,
+      425,
+      1552,
+      605
+    ],
+    "trim_offset": [
+      8,
+      70
+    ]
+  },
+  "assets/collectibles/rocket/00": {
+    "file": "assets/collectibles/rocket/00.png",
+    "width": 99,
+    "height": 95,
+    "source_rect": [
+      1614,
+      425,
+      1748,
+      605
+    ],
+    "trim_offset": [
+      21,
+      64
+    ]
+  },
+  "assets/collectibles/rocket/01": {
+    "file": "assets/collectibles/rocket/01.png",
+    "width": 105,
+    "height": 110,
+    "source_rect": [
+      1748,
+      425,
+      1871,
+      605
+    ],
+    "trim_offset": [
+      13,
+      54
+    ]
+  },
+  "assets/collectibles/rocket/02": {
+    "file": "assets/collectibles/rocket/02.png",
+    "width": 111,
+    "height": 130,
+    "source_rect": [
+      1871,
+      425,
+      2005,
+      605
+    ],
+    "trim_offset": [
+      23,
+      33
+    ]
+  },
+  "assets/collectibles/rocket/03": {
+    "file": "assets/collectibles/rocket/03.png",
+    "width": 113,
+    "height": 148,
+    "source_rect": [
+      2005,
+      425,
+      2172,
+      605
+    ],
+    "trim_offset": [
+      24,
+      32
+    ]
+  },
+  "assets/collectibles/vfx/dust/00": {
+    "file": "assets/collectibles/vfx/dust/00.png",
+    "width": 68,
+    "height": 18,
+    "source_rect": [
+      0,
+      605,
+      133,
+      724
+    ],
+    "trim_offset": [
+      49,
+      69
+    ]
+  },
+  "assets/collectibles/vfx/dust/01": {
+    "file": "assets/collectibles/vfx/dust/01.png",
+    "width": 85,
+    "height": 37,
+    "source_rect": [
+      133,
+      605,
+      260,
+      724
+    ],
+    "trim_offset": [
+      21,
+      51
+    ]
+  },
+  "assets/collectibles/vfx/dust/02": {
+    "file": "assets/collectibles/vfx/dust/02.png",
+    "width": 106,
+    "height": 56,
+    "source_rect": [
+      260,
+      605,
+      400,
+      724
+    ],
+    "trim_offset": [
+      9,
+      33
+    ]
+  },
+  "assets/collectibles/vfx/dust/03": {
+    "file": "assets/collectibles/vfx/dust/03.png",
+    "width": 102,
+    "height": 59,
+    "source_rect": [
+      400,
+      605,
+      530,
+      724
+    ],
+    "trim_offset": [
+      6,
+      30
+    ]
+  },
+  "assets/collectibles/vfx/dust/04": {
+    "file": "assets/collectibles/vfx/dust/04.png",
+    "width": 95,
+    "height": 47,
+    "source_rect": [
+      530,
+      605,
+      668,
+      724
+    ],
+    "trim_offset": [
+      12,
+      40
+    ]
+  },
+  "assets/collectibles/vfx/trail/00": {
+    "file": "assets/collectibles/vfx/trail/00.png",
+    "width": 122,
+    "height": 88,
+    "source_rect": [
+      730,
+      605,
+      874,
+      724
+    ],
+    "trim_offset": [
+      22,
+      0
+    ]
+  },
+  "assets/collectibles/vfx/trail/01": {
+    "file": "assets/collectibles/vfx/trail/01.png",
+    "width": 113,
+    "height": 50,
+    "source_rect": [
+      874,
+      605,
+      987,
+      724
+    ],
+    "trim_offset": [
+      0,
+      43
+    ]
+  },
+  "assets/collectibles/vfx/trail/02": {
+    "file": "assets/collectibles/vfx/trail/02.png",
+    "width": 142,
+    "height": 64,
+    "source_rect": [
+      987,
+      605,
+      1131,
+      724
+    ],
+    "trim_offset": [
+      0,
+      34
+    ]
+  },
+  "assets/collectibles/vfx/trail/03": {
+    "file": "assets/collectibles/vfx/trail/03.png",
+    "width": 171,
+    "height": 73,
+    "source_rect": [
+      1131,
+      605,
+      1321,
+      724
+    ],
+    "trim_offset": [
+      9,
+      29
+    ]
+  },
+  "assets/collectibles/vfx/spark/00": {
+    "file": "assets/collectibles/vfx/spark/00.png",
+    "width": 44,
+    "height": 42,
+    "source_rect": [
+      1378,
+      605,
+      1491,
+      724
+    ],
+    "trim_offset": [
+      47,
+      45
+    ]
+  },
+  "assets/collectibles/vfx/spark/01": {
+    "file": "assets/collectibles/vfx/spark/01.png",
+    "width": 51,
+    "height": 47,
+    "source_rect": [
+      1491,
+      605,
+      1604,
+      724
+    ],
+    "trim_offset": [
+      30,
+      42
+    ]
+  },
+  "assets/collectibles/vfx/spark/02": {
+    "file": "assets/collectibles/vfx/spark/02.png",
+    "width": 112,
+    "height": 71,
+    "source_rect": [
+      1604,
+      605,
+      1727,
+      724
+    ],
+    "trim_offset": [
+      11,
+      27
+    ]
+  },
+  "assets/collectibles/vfx/spark/03": {
+    "file": "assets/collectibles/vfx/spark/03.png",
+    "width": 124,
+    "height": 96,
+    "source_rect": [
+      1727,
+      605,
+      1851,
+      724
+    ],
+    "trim_offset": [
+      0,
+      10
+    ]
+  },
+  "assets/collectibles/vfx/spark/04": {
+    "file": "assets/collectibles/vfx/spark/04.png",
+    "width": 100,
+    "height": 106,
+    "source_rect": [
+      1851,
+      605,
+      1979,
+      724
+    ],
+    "trim_offset": [
+      0,
+      3
+    ]
+  },
+  "assets/collectibles/vfx/spark/05": {
+    "file": "assets/collectibles/vfx/spark/05.png",
+    "width": 124,
+    "height": 117,
+    "source_rect": [
+      1979,
+      605,
+      2172,
+      724
+    ],
+    "trim_offset": [
+      1,
+      0
+    ]
+  },
+  "assets/ui/score": {
+    "file": "assets/ui/score.png",
+    "width": 481,
+    "height": 118,
+    "source_rect": [
+      15,
+      35,
+      518,
+      172
+    ],
+    "trim_offset": [
+      11,
+      9
+    ]
+  },
+  "assets/ui/height": {
+    "file": "assets/ui/height.png",
+    "width": 417,
+    "height": 117,
+    "source_rect": [
+      528,
+      35,
+      960,
+      172
+    ],
+    "trim_offset": [
+      10,
+      8
+    ]
+  },
+  "assets/ui/combo": {
+    "file": "assets/ui/combo.png",
+    "width": 373,
+    "height": 137,
+    "source_rect": [
+      974,
+      15,
+      1370,
+      175
+    ],
+    "trim_offset": [
+      12,
+      9
+    ]
+  },
+  "assets/ui/pause": {
+    "file": "assets/ui/pause.png",
+    "width": 131,
+    "height": 132,
+    "source_rect": [
+      1375,
+      20,
+      1528,
+      180
+    ],
+    "trim_offset": [
+      8,
+      17
+    ]
+  },
+  "assets/ui/panel": {
+    "file": "assets/ui/panel.png",
+    "width": 627,
+    "height": 523,
+    "source_rect": [
+      15,
+      195,
+      665,
+      739
+    ],
+    "trim_offset": [
+      15,
+      14
+    ]
+  },
+  "assets/ui/play": {
+    "file": "assets/ui/play.png",
+    "width": 298,
+    "height": 132,
+    "source_rect": [
+      680,
+      202,
+      999,
+      349
+    ],
+    "trim_offset": [
+      11,
+      11
+    ]
+  },
+  "assets/ui/restart": {
+    "file": "assets/ui/restart.png",
+    "width": 303,
+    "height": 120,
+    "source_rect": [
+      680,
+      349,
+      999,
+      480
+    ],
+    "trim_offset": [
+      6,
+      6
+    ]
+  },
+  "assets/ui/leaderboard": {
+    "file": "assets/ui/leaderboard.png",
+    "width": 304,
+    "height": 120,
+    "source_rect": [
+      680,
+      480,
+      999,
+      609
+    ],
+    "trim_offset": [
+      5,
+      5
+    ]
+  },
+  "assets/ui/share": {
+    "file": "assets/ui/share.png",
+    "width": 303,
+    "height": 122,
+    "source_rect": [
+      680,
+      609,
+      999,
+      740
+    ],
+    "trim_offset": [
+      6,
+      2
+    ]
+  },
+  "assets/ui/gold_trophy": {
+    "file": "assets/ui/gold_trophy.png",
+    "width": 158,
+    "height": 118,
+    "source_rect": [
+      1020,
+      198,
+      1195,
+      337
+    ],
+    "trim_offset": [
+      10,
+      11
+    ]
+  },
+  "assets/ui/silver_trophy": {
+    "file": "assets/ui/silver_trophy.png",
+    "width": 133,
+    "height": 109,
+    "source_rect": [
+      1195,
+      198,
+      1350,
+      337
+    ],
+    "trim_offset": [
+      12,
+      16
+    ]
+  },
+  "assets/ui/bronze_trophy": {
+    "file": "assets/ui/bronze_trophy.png",
+    "width": 125,
+    "height": 98,
+    "source_rect": [
+      1350,
+      198,
+      1536,
+      337
+    ],
+    "trim_offset": [
+      13,
+      22
+    ]
+  },
+  "assets/ui/gold_crown": {
+    "file": "assets/ui/gold_crown.png",
+    "width": 130,
+    "height": 93,
+    "source_rect": [
+      1020,
+      344,
+      1195,
+      455
+    ],
+    "trim_offset": [
+      22,
+      14
+    ]
+  },
+  "assets/ui/silver_crown": {
+    "file": "assets/ui/silver_crown.png",
+    "width": 112,
+    "height": 75,
+    "source_rect": [
+      1195,
+      344,
+      1350,
+      455
+    ],
+    "trim_offset": [
+      23,
+      16
+    ]
+  },
+  "assets/ui/bronze_crown": {
+    "file": "assets/ui/bronze_crown.png",
+    "width": 102,
+    "height": 69,
+    "source_rect": [
+      1350,
+      344,
+      1536,
+      455
+    ],
+    "trim_offset": [
+      25,
+      18
+    ]
+  },
+  "assets/ui/star_on": {
+    "file": "assets/ui/star_on.png",
+    "width": 135,
+    "height": 120,
+    "source_rect": [
+      1020,
+      458,
+      1195,
+      600
+    ],
+    "trim_offset": [
+      22,
+      13
+    ]
+  },
+  "assets/ui/star_half": {
+    "file": "assets/ui/star_half.png",
+    "width": 119,
+    "height": 107,
+    "source_rect": [
+      1195,
+      458,
+      1350,
+      600
+    ],
+    "trim_offset": [
+      19,
+      18
+    ]
+  },
+  "assets/ui/star_off": {
+    "file": "assets/ui/star_off.png",
+    "width": 110,
+    "height": 99,
+    "source_rect": [
+      1350,
+      458,
+      1536,
+      600
+    ],
+    "trim_offset": [
+      22,
+      20
+    ]
+  },
+  "assets/ui/chevrons": {
+    "file": "assets/ui/chevrons.png",
+    "width": 116,
+    "height": 124,
+    "source_rect": [
+      1010,
+      601,
+      1150,
+      738
+    ],
+    "trim_offset": [
+      10,
+      2
+    ]
+  },
+  "assets/ui/meter": {
+    "file": "assets/ui/meter.png",
+    "width": 333,
+    "height": 55,
+    "source_rect": [
+      1160,
+      625,
+      1520,
+      710
+    ],
+    "trim_offset": [
+      12,
+      14
+    ]
+  },
+  "assets/ui/footer": {
+    "file": "assets/ui/footer.png",
+    "width": 728,
+    "height": 57,
+    "source_rect": [
+      15,
+      760,
+      760,
+      842
+    ],
+    "trim_offset": [
+      10,
+      16
+    ]
+  },
+  "assets/ui/bar_on": {
+    "file": "assets/ui/bar_on.png",
+    "width": 262,
+    "height": 65,
+    "source_rect": [
+      770,
+      760,
+      1050,
+      842
+    ],
+    "trim_offset": [
+      9,
+      11
+    ]
+  },
+  "assets/ui/bar_off": {
+    "file": "assets/ui/bar_off.png",
+    "width": 274,
+    "height": 62,
+    "source_rect": [
+      1060,
+      760,
+      1350,
+      842
+    ],
+    "trim_offset": [
+      8,
+      13
+    ]
+  },
+  "assets/ui/corners": {
+    "file": "assets/ui/corners.png",
+    "width": 126,
+    "height": 108,
+    "source_rect": [
+      1370,
+      740,
+      1536,
+      866
+    ],
+    "trim_offset": [
+      13,
+      9
+    ]
+  },
+  "assets/ui/impact": {
+    "file": "assets/ui/impact.png",
+    "width": 163,
+    "height": 109,
+    "source_rect": [
+      50,
+      865,
+      270,
+      1000
+    ],
+    "trim_offset": [
+      20,
+      8
+    ]
+  },
+  "assets/ui/cloud": {
+    "file": "assets/ui/cloud.png",
+    "width": 217,
+    "height": 107,
+    "source_rect": [
+      290,
+      865,
+      550,
+      1000
+    ],
+    "trim_offset": [
+      7,
+      10
+    ]
+  },
+  "assets/ui/spark": {
+    "file": "assets/ui/spark.png",
+    "width": 134,
+    "height": 125,
+    "source_rect": [
+      560,
+      865,
+      720,
+      1000
+    ],
+    "trim_offset": [
+      4,
+      6
+    ]
+  },
+  "assets/ui/rings": {
+    "file": "assets/ui/rings.png",
+    "width": 201,
+    "height": 130,
+    "source_rect": [
+      760,
+      865,
+      990,
+      1000
+    ],
+    "trim_offset": [
+      7,
+      1
+    ]
+  },
+  "assets/ui/vortex": {
+    "file": "assets/ui/vortex.png",
+    "width": 215,
+    "height": 132,
+    "source_rect": [
+      1010,
+      865,
+      1240,
+      1000
+    ],
+    "trim_offset": [
+      15,
+      0
+    ]
+  },
+  "assets/ui/speed": {
+    "file": "assets/ui/speed.png",
+    "width": 255,
+    "height": 89,
+    "source_rect": [
+      1240,
+      865,
+      1525,
+      1000
+    ],
+    "trim_offset": [
+      0,
+      27
+    ]
+  },
+  "assets/environment/sky/night": {
+    "file": "assets/environment/sky/night.png",
+    "width": 325,
+    "height": 179,
+    "source_rect": [
+      10,
+      0,
+      347,
+      190
+    ],
+    "trim_offset": [
+      9,
+      5
+    ]
+  },
+  "assets/environment/sky/twilight": {
+    "file": "assets/environment/sky/twilight.png",
+    "width": 306,
+    "height": 173,
+    "source_rect": [
+      348,
+      0,
+      661,
+      190
+    ],
+    "trim_offset": [
+      4,
+      11
+    ]
+  },
+  "assets/environment/sky/moon": {
+    "file": "assets/environment/sky/moon.png",
+    "width": 294,
+    "height": 172,
+    "source_rect": [
+      662,
+      0,
+      962,
+      190
+    ],
+    "trim_offset": [
+      3,
+      12
+    ]
+  },
+  "assets/environment/sky/space": {
+    "file": "assets/environment/sky/space.png",
+    "width": 278,
+    "height": 176,
+    "source_rect": [
+      963,
+      0,
+      1246,
+      190
+    ],
+    "trim_offset": [
+      2,
+      8
+    ]
+  },
+  "assets/environment/sky/cloud_city": {
+    "file": "assets/environment/sky/cloud_city.png",
+    "width": 279,
+    "height": 178,
+    "source_rect": [
+      1247,
+      0,
+      1536,
+      190
+    ],
+    "trim_offset": [
+      2,
+      7
+    ]
+  },
+  "assets/environment/lounge/counter": {
+    "file": "assets/environment/lounge/counter.png",
+    "width": 554,
+    "height": 221,
+    "source_rect": [
+      0,
+      193,
+      563,
+      436
+    ],
+    "trim_offset": [
+      9,
+      13
+    ]
+  },
+  "assets/environment/lounge/window": {
+    "file": "assets/environment/lounge/window.png",
+    "width": 170,
+    "height": 200,
+    "source_rect": [
+      565,
+      200,
+      739,
+      436
+    ],
+    "trim_offset": [
+      0,
+      22
+    ]
+  },
+  "assets/environment/lounge/sofa": {
+    "file": "assets/environment/lounge/sofa.png",
+    "width": 248,
+    "height": 201,
+    "source_rect": [
+      740,
+      200,
+      997,
+      436
+    ],
+    "trim_offset": [
+      5,
+      22
+    ]
+  },
+  "assets/environment/lounge/table": {
+    "file": "assets/environment/lounge/table.png",
+    "width": 141,
+    "height": 105,
+    "source_rect": [
+      999,
+      307,
+      1154,
+      436
+    ],
+    "trim_offset": [
+      4,
+      21
+    ]
+  },
+  "assets/environment/lounge/lamp": {
+    "file": "assets/environment/lounge/lamp.png",
+    "width": 63,
+    "height": 77,
+    "source_rect": [
+      1055,
+      202,
+      1154,
+      307
+    ],
+    "trim_offset": [
+      22,
+      12
+    ]
+  },
+  "assets/environment/lounge/panel": {
+    "file": "assets/environment/lounge/panel.png",
+    "width": 140,
+    "height": 188,
+    "source_rect": [
+      1155,
+      200,
+      1307,
+      436
+    ],
+    "trim_offset": [
+      5,
+      24
+    ]
+  },
+  "assets/environment/lounge/column": {
+    "file": "assets/environment/lounge/column.png",
+    "width": 74,
+    "height": 236,
+    "source_rect": [
+      1310,
+      193,
+      1395,
+      436
+    ],
+    "trim_offset": [
+      11,
+      7
+    ]
+  },
+  "assets/environment/lounge/plant": {
+    "file": "assets/environment/lounge/plant.png",
+    "width": 131,
+    "height": 218,
+    "source_rect": [
+      1396,
+      193,
+      1536,
+      436
+    ],
+    "trim_offset": [
+      0,
+      25
+    ]
+  },
+  "assets/environment/roof/gable_1": {
+    "file": "assets/environment/roof/gable_1.png",
+    "width": 192,
+    "height": 165,
+    "source_rect": [
+      0,
+      437,
+      204,
+      611
+    ],
+    "trim_offset": [
+      11,
+      5
+    ]
+  },
+  "assets/environment/roof/gable_2": {
+    "file": "assets/environment/roof/gable_2.png",
+    "width": 185,
+    "height": 164,
+    "source_rect": [
+      205,
+      437,
+      390,
+      611
+    ],
+    "trim_offset": [
+      0,
+      5
+    ]
+  },
+  "assets/environment/roof/gable_3": {
+    "file": "assets/environment/roof/gable_3.png",
+    "width": 194,
+    "height": 156,
+    "source_rect": [
+      391,
+      437,
+      586,
+      611
+    ],
+    "trim_offset": [
+      0,
+      14
+    ]
+  },
+  "assets/environment/roof/tiles": {
+    "file": "assets/environment/roof/tiles.png",
+    "width": 152,
+    "height": 131,
+    "source_rect": [
+      587,
+      437,
+      741,
+      611
+    ],
+    "trim_offset": [
+      2,
+      43
+    ]
+  },
+  "assets/environment/roof/gable_4": {
+    "file": "assets/environment/roof/gable_4.png",
+    "width": 147,
+    "height": 164,
+    "source_rect": [
+      742,
+      437,
+      889,
+      611
+    ],
+    "trim_offset": [
+      0,
+      7
+    ]
+  },
+  "assets/environment/roof/chimneys": {
+    "file": "assets/environment/roof/chimneys.png",
+    "width": 234,
+    "height": 156,
+    "source_rect": [
+      890,
+      437,
+      1124,
+      611
+    ],
+    "trim_offset": [
+      0,
+      18
+    ]
+  },
+  "assets/environment/roof/lamp": {
+    "file": "assets/environment/roof/lamp.png",
+    "width": 184,
+    "height": 170,
+    "source_rect": [
+      1125,
+      437,
+      1309,
+      611
+    ],
+    "trim_offset": [
+      0,
+      4
+    ]
+  },
+  "assets/environment/roof/antenna": {
+    "file": "assets/environment/roof/antenna.png",
+    "width": 217,
+    "height": 189,
+    "source_rect": [
+      1310,
+      420,
+      1536,
+      611
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/environment/clouds/cluster_1": {
+    "file": "assets/environment/clouds/cluster_1.png",
+    "width": 293,
+    "height": 172,
+    "source_rect": [
+      0,
+      615,
+      300,
+      817
+    ],
+    "trim_offset": [
+      7,
+      17
+    ]
+  },
+  "assets/environment/clouds/cluster_2": {
+    "file": "assets/environment/clouds/cluster_2.png",
+    "width": 365,
+    "height": 186,
+    "source_rect": [
+      300,
+      615,
+      665,
+      817
+    ],
+    "trim_offset": [
+      0,
+      7
+    ]
+  },
+  "assets/environment/islands/cluster_1": {
+    "file": "assets/environment/islands/cluster_1.png",
+    "width": 244,
+    "height": 190,
+    "source_rect": [
+      666,
+      615,
+      910,
+      817
+    ],
+    "trim_offset": [
+      0,
+      4
+    ]
+  },
+  "assets/environment/islands/cluster_2": {
+    "file": "assets/environment/islands/cluster_2.png",
+    "width": 299,
+    "height": 200,
+    "source_rect": [
+      911,
+      615,
+      1225,
+      817
+    ],
+    "trim_offset": [
+      0,
+      0
+    ]
+  },
+  "assets/environment/islands/cluster_3": {
+    "file": "assets/environment/islands/cluster_3.png",
+    "width": 297,
+    "height": 175,
+    "source_rect": [
+      1226,
+      615,
+      1536,
+      817
+    ],
+    "trim_offset": [
+      1,
+      18
+    ]
+  },
+  "assets/environment/props/pipes": {
+    "file": "assets/environment/props/pipes.png",
+    "width": 156,
+    "height": 177,
+    "source_rect": [
+      0,
+      820,
+      190,
+      1024
+    ],
+    "trim_offset": [
+      17,
+      4
+    ]
+  },
+  "assets/environment/props/railing": {
+    "file": "assets/environment/props/railing.png",
+    "width": 242,
+    "height": 181,
+    "source_rect": [
+      192,
+      820,
+      446,
+      1024
+    ],
+    "trim_offset": [
+      12,
+      0
+    ]
+  },
+  "assets/environment/props/wall": {
+    "file": "assets/environment/props/wall.png",
+    "width": 259,
+    "height": 172,
+    "source_rect": [
+      447,
+      820,
+      706,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      8
+    ]
+  },
+  "assets/environment/props/vent": {
+    "file": "assets/environment/props/vent.png",
+    "width": 99,
+    "height": 74,
+    "source_rect": [
+      710,
+      820,
+      825,
+      925
+    ],
+    "trim_offset": [
+      9,
+      18
+    ]
+  },
+  "assets/environment/props/ac": {
+    "file": "assets/environment/props/ac.png",
+    "width": 116,
+    "height": 88,
+    "source_rect": [
+      830,
+      820,
+      965,
+      925
+    ],
+    "trim_offset": [
+      19,
+      17
+    ]
+  },
+  "assets/environment/props/skylight": {
+    "file": "assets/environment/props/skylight.png",
+    "width": 227,
+    "height": 75,
+    "source_rect": [
+      770,
+      926,
+      1005,
+      1024
+    ],
+    "trim_offset": [
+      4,
+      0
+    ]
+  },
+  "assets/environment/props/chimney": {
+    "file": "assets/environment/props/chimney.png",
+    "width": 130,
+    "height": 158,
+    "source_rect": [
+      1006,
+      820,
+      1140,
+      1024
+    ],
+    "trim_offset": [
+      4,
+      23
+    ]
+  },
+  "assets/environment/props/lights": {
+    "file": "assets/environment/props/lights.png",
+    "width": 264,
+    "height": 60,
+    "source_rect": [
+      1140,
+      818,
+      1410,
+      878
+    ],
+    "trim_offset": [
+      1,
+      0
+    ]
+  },
+  "assets/environment/props/awning": {
+    "file": "assets/environment/props/awning.png",
+    "width": 197,
+    "height": 99,
+    "source_rect": [
+      1190,
+      879,
+      1400,
+      1024
+    ],
+    "trim_offset": [
+      3,
+      0
+    ]
+  },
+  "assets/environment/props/neon": {
+    "file": "assets/environment/props/neon.png",
+    "width": 114,
+    "height": 97,
+    "source_rect": [
+      1410,
+      820,
+      1536,
+      1024
+    ],
+    "trim_offset": [
+      0,
+      9
+    ]
+  }
+}
